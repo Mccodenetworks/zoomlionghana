@@ -1,0 +1,651 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media (min-width:800px) {
+    .home{
+        overflow-x: hidden;
+    }
+    .div-block-contact{
+        background-color: orange;
+        padding: 0 2rem;
+    }
+
+    .logo-group{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .logo-text{
+        font-family: poppins;
+        color: white;
+    }
+
+
+    .sm-account-title{
+        font-family: poppins;
+        color: rgb(1, 1, 77);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-flex-card{
+        background-color: rgb(216, 105, 105);
+    }
+
+    .schedule-section{
+        background-color: rgb(252, 251, 249);
+    }
+
+    .account{
+        background-color: rgb(230, 243, 248);
+    }
+
+    .flex-account-box{
+        width: 70%;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        border: 1px solid lightgray;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 0 3rem;
+    }
+
+     .profile-pic{
+        width: 100px;
+        border-radius: 50%;
+        animation: shadow-spin 2s linear infinite;
+    }
+
+    @keyframes shadow-spin{
+        0%,100%{
+            box-shadow: 0 0 0px rgba(0,0,0,0.3);
+        }
+        50%{
+             box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+    }
+
+    .sm-account-text{
+        font-family: system-ui;
+        color: rgb(2, 2, 61);
+        font-weight: 500;
+        margin-bottom: 0.3rem;
+    }
+
+      .report-upload{
+        width: 100%;
+        border: 1px solid rgb(218, 216, 216);
+        padding: 0.3rem 1rem;
+        border-radius: 0.3rem;
+    }
+
+    .upload-bold-txt{
+        font-family: poppins;
+        margin-bottom: 0.5rem;
+    }
+
+    .upload-input{
+        width: 100%;
+        margin-bottom: 0.5rem;
+        font-family: poppins;
+        font-size: 16px;
+        
+    }
+    #contact-div{
+        display: none;
+    }
+
+    /* account  */
+    .black-account-details{
+        width: 70%;
+        padding: 1rem;
+        background-color: white;
+        margin: 1rem auto;
+        border: 1px solid lightgray;
+        /* box-shadow: 0 0 5px rgba(0,0,0,0.3); */
+        border-radius: 0.5rem;
+    }
+
+    .bold-title-text-p{
+         font-family: system-ui;
+        color: rgb(1, 1, 37);
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 0.7rem;
+    }
+
+    /* action supports div */
+    .p-actions{
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.4rem;
+        margin-bottom: 1rem;
+    }
+
+    /* card-sm-account */
+    .card-sm-account{
+        width: 150px;
+        padding: 0.5rem 1rem;
+        border: 1px solid lightgrey;
+        border-radius: 0.3rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        transition: background-color 1s ease-in-out;
+        cursor: pointer;
+    }
+
+       .card-sm-account:hover{
+        background-color: rgb(201, 222, 235);
+       }
+
+    .card-sm-account i{
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+         color: rgb(4, 4, 114);
+    }
+
+     .account-sm{
+          font-family: system-ui;
+        color: rgb(1, 1, 37);
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    /* feedback */
+    .feedback{
+        width: 100%;
+        display: flex;
+        text-align: center;
+        border: 1px solid lightgray;
+        background-color: white;
+        border-radius: 0.3rem;
+        padding: 0.5rem 0.5rem;
+        margin-bottom: 0.5rem;
+        gap: 1rem;
+        cursor: pointer;
+           transition: background-color 1s ease-in-out;
+    }
+    .feedback i{
+         font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+         color: rgb(4, 4, 114);
+    }
+
+    /* activities summary */
+    .activities-summary{
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid lightgrey;
+        background-color: white;
+          border-radius: 0.3rem;
+          margin-bottom: 1rem;
+         
+    }
+
+    .activities-card{
+        width: 100%;
+        padding: 0.5rem 2rem 0.5rem 0.5rem;
+        border-bottom: 1px solid lightgray;
+         cursor: pointer;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+            transition: background-color 1s ease-in-out;
+    }
+
+    .activities-card:nth-of-type(3){
+        border-bottom: none;
+    }
+    .activities-card:hover, .feedback:hover{
+         background-color: rgb(220, 236, 245);
+    } 
+
+    /* btn-logout */
+    .btn-logout{
+        padding: 0.5rem 2rem;
+        background-color: transparent;
+        border: 1px solid rgb(247, 23, 23);
+        border-radius: 20px;
+        font-family: system-ui;
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 1rem auto;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 0.7rem;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+        color: rgb(247, 23, 23);
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        transition: transform .3s ease-in-out;
+    }
+
+     .btn-logout:hover{
+        transform: scale(1.1);
+     }
+
+     /* users feeback */
+     .users-feedback{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.feedback-container{
+    width: 500px;
+    background-color: white;
+    border-radius: 0.3rem;
+    margin: 3rem auto;
+    padding: 1rem;
+}
+
+.feed-bold-text{
+    font-family: poppins;
+    color: rgb(2, 2, 77);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.question-p{
+    font-family: system-ui;
+    color: black;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.container-question{
+    margin-bottom: 1rem;
+}
+
+label{
+    display: block;
+    font-size: 1rem;
+    font-family: system-ui;
+}
+
+.feedback-btn-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.btn{
+     padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: poppins;
+    }
+
+      .btn-cancel {
+      background-color: #ccc;
+      color: #ec0e0e;
+    }
+
+    .btn-submit {
+      background-color: #105be7;
+      color: white;
+    }
+
+    .btn:hover{
+        opacity: 80%;
+    }
+
+    .feed-input{
+        margin-right: 10px;
+    }
+
+    /* status-box */
+    .status-box{
+        background-color: rgb(238, 241, 241);
+        font-family: poppins;
+        font-size: 14px;
+        padding: 2px 5px;
+        border-radius: 0.3rem;
+    }
+
+}
+
+
+/* mobile device max-width */
+@media (max-width:768px) {
+    .schedule-section{
+        background-color: rgb(250, 249, 247);
+        padding-bottom: none;
+        padding-top: 3rem;
+    }
+
+    .account{
+        background-color: rgb(255, 255, 255);
+    }
+
+    .hide-account{
+        display: none;
+    }
+
+        .logo-group{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .logo-text{
+        font-family: poppins;
+        color: white;
+    }
+
+    .flex-account-box{
+        width: 90%;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0 3rem;
+    }
+
+    .profile-pic{
+        width: 100px;
+        border-radius: 50%;
+        animation: shadow-spin 2s linear infinite;
+    }
+
+    @keyframes shadow-spin{
+        0%,100%{
+            box-shadow: 0 0 0px rgba(0,0,0,0.3);
+        }
+        50%{
+             box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+    }
+
+    .profile-content{
+        text-align: center;
+    }
+
+    .sm-name-text{
+        font-size: 1.5rem;
+    }
+
+    .sm-account-text{
+        font-family: system-ui;
+        color: rgb(2, 2, 61);
+        font-weight: 500;
+    }
+
+    .black-account-details{
+        display: block;
+        width: 95%;
+        background-color: rgb(241, 243, 248);
+        margin: 0 auto;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+    .bold-title-text-p{
+        font-family: system-ui;
+        color: rgb(1, 1, 37);
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+    .account-sm{
+          font-family: system-ui;
+        color: rgb(1, 1, 37);
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+      .p-actions{
+        width: 100%;
+        display: flex;
+          flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.4rem;
+        margin-bottom: 1rem;
+    }
+
+     .card-sm-account{
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 0.3rem;
+        /* margin-top: 1rem; */
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        flex-direction: row;
+        transition: background-color 1s ease-in-out;
+        cursor: pointer;
+        text-align: center;
+    }
+
+       .card-sm-account:hover{
+        background-color: rgb(197, 226, 243);
+       }
+
+    .card-sm-account i{
+        font-size: 1rem;
+        margin-bottom: 0.1rem;
+         color: rgb(4, 4, 114);
+    }
+
+      .account-sm{
+          font-family: system-ui;
+        color: rgb(1, 1, 37);
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    
+
+    /* activities summary */
+    .activities-summary{
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid lightgrey;
+          border-radius: 0.3rem;
+          margin-bottom: 1rem;
+         
+    }
+
+    .activities-card{
+        width: 100%;
+        padding: 0.5rem 2rem 0.5rem 0.5rem;
+        border-bottom: 1px solid lightgray;
+        background-color: white;
+         cursor: pointer;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+            transition: background-color 1s ease-in-out;
+    }
+
+    .activities-card:nth-of-type(3){
+        border-bottom: none;
+    }
+    .activities-card:hover{
+         background-color: rgb(220, 236, 245);
+    }
+
+    /*  .feedback */
+    .feedback{
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        background-color: white;
+        align-items: center;
+        text-align: center;
+        padding: 0.5rem;
+        margin-bottom: 0.3rem;
+    }
+
+    /* btn-logout */
+    .btn-logout{
+        padding: 0.5rem 2rem;
+        background-color: transparent;
+        border: 1px solid rgb(245, 17, 17);
+        border-radius: 20px;
+        font-family: system-ui;
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 1rem auto;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 0.7rem;
+        background-color: white;
+         color: rgb(247, 23, 23);
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    .report-upload{
+        width: 100%;
+        border: 1px solid rgb(5, 5, 5);
+        padding: 0.3rem;
+        border-radius: 0.3rem;
+        margin-top: 0.5rem;
+    }
+      .report-upload{
+        width: 100%;
+        border: 1px solid rgb(218, 216, 216);
+        padding: 0.3rem 1rem;
+        border-radius: 0.3rem;
+    }
+
+    .upload-bold-txt{
+        font-family: poppins;
+        margin-bottom: 0.5rem;
+    }
+
+    .upload-input{
+        width: 100%;
+        margin-bottom: 0.5rem;
+        font-family: poppins;
+        font-size: 16px;
+        
+    }
+
+     /* users feeback */
+     .users-feedback{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+}
+
+.feedback-container{
+    width: 400px;
+    background-color: white;
+    border-radius: 0.3rem;
+    margin: 6rem auto;
+    padding: 1rem;
+    
+}
+
+.feed-bold-text{
+    font-family: poppins;
+    color: rgb(2, 2, 77);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.question-p{
+    font-family: system-ui;
+    color: black;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.container-question{
+    margin-bottom: 1rem;
+}
+
+label{
+    display: block;
+    font-size: 1rem;
+    font-family: system-ui;
+}
+
+.feedback-btn-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.btn{
+     padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: poppins;
+    }
+
+      .btn-cancel {
+      background-color: #ccc;
+      color: #ec0e0e;
+    }
+
+    .btn-submit {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .feed-input{
+        margin-right: 10px;
+    }
+
+    
+.payment-history-container {
+  height: 100vh;
+  width:100%;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  transition: .3s ease-in-out;
+}
+
+.payment-show-div{
+    position: absolute;
+    width: 400px;
+    background-color: white;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow: scroll;
+}
+
+}

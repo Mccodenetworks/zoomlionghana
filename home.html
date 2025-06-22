@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>zoomliongh.com</title>
+    <script src="https://kit.fontawesome.com/41d51bfab0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./media.css">
+</head>
+<body>
+
+    <!-- navigation panel contents -->
+     <!-- top-nav -->
+      <nav class="top-nav-fixed">
+        <div class="logo-group">
+            <img src="LOGO.jpeg" class="logo" width="0" loading="lazy">
+            <h1 class="logo-text">ZOOMLIONGH</h1>
+        </div>
+        <div class="notification-box" id="toggleNotification">
+            <i class="fa-solid fa-bell"></i>
+            <div class="sm-circle-top"></div>
+        </div>
+      </nav>
+
+      <!-- nav-bottom-panel-contents -->
+       <nav class="bottom-nav-fixed">
+        <a href="#" class="link-menu active" onclick="openHome()">
+            <i class="fa-solid fa-house"></i>
+            <span class="home-label">Home</span>
+        </a>
+
+        <a href="#" class="link-menu" onclick="openSchedule()">
+            <i class="fas fa-calendar-alt"></i>
+            <span class="home-label">Schedule</span>
+          </a>
+
+        <a href="#" class="link-menu" onclick="openRequest()">
+            <i class="fas fa-dumpster"></i>
+            <span class="home-label">Request</span>
+        </a>
+
+        <a href="#" class="link-menu" onclick="openAccount()">
+            <i class="fa-solid fa-user"></i>
+            <span class="home-label">Account</span>
+        </a>
+
+   
+       </nav>
+
+       <!-- main contents starts -->
+<main>
+
+<!-- loading page -->
+<div class="load-Move" id="show-Loading">
+    <img src="LOGO.jpeg" alt="logo" class="load-img" width="100px">
+</div>
+<!-- end of loading page -->
+
+
+
+    <!-- section for home -->
+    <section>
+        <div class="home" id="home-section">
+
+            <!-- announcement/blog div(new updates) -->
+             <div class="new-update-div">
+                <p>announcement div</p>
+             </div>
+
+             <!-- dashboard-review -->
+              <div class="flex-grid">
+                <div class="grid-card">
+                <p class="grid-text-top"><i class="fa-solid fa-calendar-days"></i>Next pick up</p>
+                                <div class="inner-box">
+                                    <!-- <span class="inner-span">Monday</span> -->
+                                    <p class="sm-text">Mon. 5 may 2025</p>
+                                    <p class="sm-sm-text">6:00am - 5:00pm</p>
+                                </div>            
+
+                </div>
+
+                               <div class="grid-card">
+                    <p class="grid-text-top"><i class="fa-solid fa-code-pull-request"></i> Current Request Status</p>
+                    <div class="inner-box">
+                    <p class="sm-text" id="total-request-count">Total Requests: 0</p>
+
+                        <div id="current-request-status"></div> <!-- Changed ID here -->
+                        <p class="sm-text"></p>
+                    </div>
+                    </div>
+
+                                    <div class="grid-card pay">
+                                         <p class="sm-text">Monthly Payment</p>
+                                    <p id="payment-text-status" class="sm-sm-text">No payment.</p>
+                                </div>
+
+              </div>
+
+             <!-- flex-layout-frequent services div -->
+              <div class="flex-layout">
+                <!-- card for review -->
+
+                        <!-- frequent services/access -->
+                        <div class="quick-services">
+                            <p class="text-quick-bold">Quick Access</p>
+                            
+                            <!-- flex-services-div -->
+                            <div class="quick-access-flex">
+                                <div class="box box2" onclick="openPaymentPanel()">
+                                    <!-- inner top flex div -->
+                                <div class="inline-flex-top">
+                                    <img src="images/payment.png" alt="payment" width="0" loading="lazy" class="sm-icon">
+                                    <p class="sm-text-top">Payment</p>
+                                </div>
+                                <!-- inner box div -->
+                                <div class="inner-box smbox">
+                                    <p class="sm-text-sm">Pay for waste services</p>
+                                </div>
+                                </div>
+
+                                <div class="box box2" onclick="openBinPanel()">
+                                    <!-- inner top flex div -->
+                                <div class="inline-flex-top">
+                                    <img src="images/bin.png" alt="bin" width="0" loading="lazy" class="sm-icon">
+                                    <p class="sm-text-top">Bin</p>
+                                </div>
+                                <!-- inner box div -->
+                                <div class="inner-box smbox">
+                                    <p class="sm-text-sm">Request for bin and others</p>
+                                </div>
+                                </div>
+
+                                
+                                <div class="box box2 alert-box" onclick="openReportPanel()">
+                                    <!-- inner top flex div -->
+                                <div class="inline-flex-top">
+                                    <img src="images/alert.png" alt="bin" width="0" loading="lazy" class="sm-icon">
+                                    <p class="sm-text-top alert-text">Report</p>
+                                </div>
+                                <!-- inner box div -->
+                                <div class="inner-box smbox">
+                                    <p class="sm-text-sm">Report sanitation issue</p>
+                                </div>
+                                </div>
+
+                                <div class="box box2" onclick="openContactPanel()" id="contact-div">
+                                    <!-- inner top flex div -->
+                                <div class="inline-flex-top">
+                                    <img src="images/call.png" alt="customer" width="0" loading="lazy" class="sm-icon">
+                                    <p class="sm-text-top">Contact us</p>
+                                </div>
+                                <!-- inner box div -->
+                                <div class="inner-box smbox">
+                                    <p class="sm-text-sm">Contact us for assistance</p>
+                                </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+               <!-- <i class="fa-solid fa-money-check-dollar"></i>
+               <i class="fa-solid fa-circle-exclamation"></i> -->
+
+              </div>
+              <!-- end of flex-layout for frequent services -->
+
+              <!-- <div class="contribution">
+                <p class="sm-text-sm p">Our contribution to the country</p>
+              </div> -->
+
+              <!-- each card action/trigger event box panel for frequent action -->
+               <div class="panelOpenBox" id="panelOpenBox">
+
+                <div class="headerText-line-">
+                    <img src="images/arrow (1).png" alt="arrow-left" class="arrow-left" width="0" onclick="closePanelPayBox()">
+                    <h4 class="top-head">Make a Payment</h4>
+                </div>
+
+                <!-- form for payment -->
+               <div class="form-box">
+                <form id="payment-form">
+                    <!-- Mobile Money Provider Selection -->
+                    <div class="form-group">
+                        <label for="mobile-provider">Choose Mobile Money Provider</label>
+                        <div class="mobile-provider-selector">
+                            <div class="provider-option" data-provider="mtn">
+                                <input type="radio" id="provider-mtn" name="mobile_provider" value="mtn" checked>
+                                <label for="provider-mtn" class="provider-option-label">
+                                    <div class="provider-logo mtn-logo">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <span>MTN Mobile Money</span>
+                                </label>
+                            </div>
+                            
+                            <div class="provider-option" data-provider="vodafone">
+                                <input type="radio" id="provider-vodafone" name="mobile_provider" value="vodafone">
+                                <label for="provider-vodafone" class="provider-option-label">
+                                    <div class="provider-logo vodafone-logo">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <span>Vodafone Cash</span>
+                                </label>
+                            </div>
+                            
+                            <div class="provider-option" data-provider="airteltigo">
+                                <input type="radio" id="provider-airteltigo" name="mobile_provider" value="airteltigo">
+                                <label for="provider-airteltigo" class="provider-option-label">
+                                    <div class="provider-logo airteltigo-logo">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <span>AirtelTigo Money</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="payment-customer-name">Full Name</label>
+                        <input type="text" id="payment-customer-name" name="customer_name" placeholder="Enter your full name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="payment-customer-UserID">User ID</label>
+                        <input type="text" id="payment-customer-UserID" name="customer_ID" placeholder="Enter your user ID" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="payment-customer-phone">Phone Number</label>
+                        <input type="tel" id="payment-customer-phone" name="customer_phone" placeholder="+233 000 000 000" class="form-input" required>
+                        <small class="form-help">This number will be used for mobile money payment</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment-customer-address">Email</label>
+                        <input type="text" id="payment-customer-email" name="customer_email" placeholder="Enter your email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="payment-service-type">Service Type</label>
+                        <select id="payment-service-type" name="service_type" class="form-input" required>
+                            <option value="">Select a service</option>
+                            <option value="waste_collection">Waste Collection - GHS 50.00</option>
+                            <option value="bin_rental">Bin Rental - GHS 25.00</option>
+                            <option value="special_collection">Special Collection - GHS 75.00</option>
+                            <option value="recycling_service">Recycling Service - GHS 40.00</option>
+                            <option value="emergency_collection">Emergency Collection - GHS 100.00</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="payment-amount">Amount (GHS)</label>
+                        <div class="amount-display">
+                            <input type="number" id="payment-amount" name="amount" placeholder="0.00" class="form-input amount-input" step="0.01" min="1" required readonly>
+                            <div class="currency-symbol">GHS</div>
+                        </div>
+                    </div>
+
+                    
+
+                    <button type="submit" class="btn-pay mobile-money" id="pay-button">
+                        <i class="fas fa-mobile-alt" id="pay-icon"></i> 
+                        <span id="pay-text">Pay with Mobile Money</span>
+                    </button>
+                </form>
+                
+                <!-- Payment Status Messages -->
+                <div id="payment-messages" style="margin-top: 1rem;"></div>
+               </div>
+               </div>
+
+               <div id="confirmation-modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <h3 class="bold-modal-txt">Confirm Payment</h3>
+    <p class="sm-modal-txt">Service: <span id="confirm-service"></span></p>
+    <p class="sm-modal-txt">Amount: <span id="confirm-amount"></span></p>
+    <p class="sm-modal-txt">Provider: <span id="confirm-provider"></span></p>
+    <p class="sm-modal-txt">User ID: <span id="confirm-userid"></span></p>
+    <p class="sm-modal-txt">Phone: <span id="confirm-phone"></span></p>
+  <div class="btn-flex">
+      <button id="confirm-pay-btn" Class="primary-pay">Confirm</button>
+    <button id="cancel-pay-btn" class="cancel-pay">Cancel</button>
+  </div>
+  </div>
+</div>
+
+
+<!-- Success Modal -->
+<div id="success-modal" class="modal">
+  <div class="modal-content">
+    <h3 class="bold-modal-txt">✅ Payment Successful</h3>
+    <p class="sm-modal-txt">Thank you for your payment!</p>
+    <p class="sm-modal-txt"><strong>Reference:</strong> <span id="success-reference"></span></p>
+    <button class="btn btn-confirm" id="close-success-btn">Close</button>
+  </div>
+</div>
+
+               <!-- new bin card click -->
+               <div class="panelOpenBox" id="panelBinBox">
+                <div class="headerText-line-">
+                    <img src="images/arrow (1).png" alt="arrow-left" class="arrow-left" width="0" onclick="closePanelBinBox()">
+                    <h4 class="top-head">Request New Bin</h4>
+                </div>
+
+                       <!-- form for request -->
+               <div class="form-box">
+                <form>
+                    <input type="text" placeholder="Full Name" class="form-input" id="binFullName" required>
+                    <br>
+                 
+                    <input type="text" placeholder="Phone Number" class="form-input" id="binPhone" required>
+                    <br>
+                    <input type="text" placeholder="Bin Type" class="form-input" id="binType" required>
+                    <br>
+                    <input type="text" placeholder="Quantity" class="form-input" id="binQuantity" required>
+                    <br>
+                   <textarea name="address" class="long-text" placeholder="Delivery Address" id="binAddress" required></textarea>
+
+                    <button class="btn-requst" id="NewBinBtn">Submit Request</button>
+                    
+                 </form>
+               </div>
+               </div>
+
+                   <!-- new report card click -->
+                   <div class="panelOpenBox" id="panelReportBox">
+                    <div class="headerText-line-">
+                        <img src="images/arrow (1).png" alt="arrow-left" class="arrow-left" width="0" onclick="closePanelReportBox()">
+                        <h4 class="top-head">Report Issue</h4>
+                    </div>
+
+                                 <!-- form for report issue -->
+               <div class="form-box">
+                <form>
+                    <input type="text" placeholder="Location" class="form-input" id="location">
+                    <br>
+
+                    <input type="text" placeholder="Phone Number" class="form-input" id="phone">
+                    <br>
+                   <textarea name="address" id="address" class="description-text" placeholder="Add a brief description that'll be  helpful" rows="3"></textarea>
+                
+                
+                    <button class="btn-requst report-btn" id="report-btn" type="submit">Submit</button>
+                    
+                 </form>
+               </div>
+                   </div>
+
+                         <!-- new contact card click -->
+                         <div class="panelOpenBox" id="panelContactBox">
+                            <div class="headerText-line-">
+                                <img src="images/arrow (1).png" alt="arrow-left" class="arrow-left" width="0" onclick="closePanelContactBox()">
+                                <h4 class="top-head">Contact Us</h4>
+                            </div>
+
+                           <div class="div-block-contact">
+                            <p class="sm-account-title">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>
+                            <div class="contact-flex-card">
+                                <div class="text-box">
+                                    <p><strong>Call Us</strong></p>
+                                    <p class="sm-sm-contact-p"><a href="tel:+233307019199">+233 (0) 30 701 9199</a></p>
+                                </div>
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+
+                            <div class="contact-flex-card">
+                                <div class="text-box">
+                                    <p><strong>Whatsapp</strong></p>
+                                    <p class="sm-sm-contact-p"><a href="tel:+233307019199">+233 (0) 30 701 9199</a></p>
+                                </div>
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+
+                            <div class="contact-flex-card">
+                                <div class="text-box">
+                                    <p><strong>Mail Us</strong></p>
+                                    <p class="sm-sm-contact-p"><a href="mailto:support@zoomlionghana.com">support@zoomlionghana.com</a></p>
+                                    <p class="sm-sm-contact-p"><a href="mailto:support@zoomlionghana.com">info@zoomlionghana.com</a></p>
+                                </div>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div class="contact-flex-card">
+                                <div class="text-box">
+                                    <p><strong>Facebook</strong></p>
+                                    <p class="sm-sm-contact-p"><a href="mailto:support@zoomlionghana.com">@zoomlionltd</a></p>
+                                </div>
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+
+                            <div class="contact-flex-card">
+                                <div class="text-box">
+                                    <p><strong>Instagram</strong></p>
+                                    <p class="sm-sm-contact-p"><a href="mailto:support@zoomlionghana.com">@zoomlionltd</a></p>
+                                </div>
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+
+                            
+
+                           </div>
+                           </div>
+        </div>
+     </section>
+    <!-- above end home-section -->
+
+    <!-- schedule for schedule section start -->
+     <section>
+        <div class="schedule-section schedule" id="schedule-section">
+            <!-- header-name -->
+            <div class="headerText-sch">
+                <!-- <img src="images/arrow (1).png" alt="arrow-left" class="arrow-left sch" width="0" onclick="closePanelScheduletBox()"> -->
+                <h4 class="top-sch">Schedule</h4>
+            </div>
+
+            <!-- next pick up schedule -->
+             <div class="card-next-pick">
+                <div class="top-title-flex">
+                    <h5 class="sub-head-title"><i class="fa-solid fa-calendar-days"></i>Next Pickup</h5>
+                </div>
+                <p class="sm-schedule-text">Monday 6 may, 2025</p>
+                <p class="sm-schedule-text">Time: 6:00am - 5:00pm</p>
+             </div>
+
+             <!-- header-text for upcoming days -->
+             <h4 class="head-sub">Upcoming Pick Days</h4>
+
+             <!-- card for upcoming days pickup -->
+              <div class="card-upcoming-days">
+                <img src="images/recycle.png" alt="recycle" width="0" class="upcoming-icon" loading="lazy">
+              <div class="text-dates">
+                <p class="sm-upcoming-text">Monday 6 may, 2025</p>
+                <p class="sm-upcoming-text">Time: 6:00am - 5:00pm</p>
+                <span class="status today">Today</span>
+              </div>
+
+              </div>
+
+              <div class="card-upcoming-days">
+                <img src="images/recycle.png" alt="recycle" width="0" class="upcoming-icon" loading="lazy">
+              <div class="text-dates">
+                <p class="sm-upcoming-text">Monday 12 may, 2025</p>
+                <p class="sm-upcoming-text">Time: 6:00am - 5:00pm</p>
+                <span class="status pending">Pending</span>
+              </div>
+
+              </div>
+
+
+              <!-- card alert holiday -->
+               <div class="alert-holiday">
+                <img src="images/alert.png" alt="alert" width="0" loading="lazy" class="upcoming-icon">
+                <p class="sm-upcoming-text red-color">There will no be pickup on holidays(Public holidays)</p>
+               </div>
+
+               <!-- request/book pickup schedule -->
+               <span class="span-request" onclick="openPickupWaste()">Request Reschedule</span>
+
+        </div>
+     </section>
+     <!-- schedule section end -->
+<!-- error message -->
+      <div class="alert-message" id="alertError">
+        <span id="alert" class="message-popup">Please fill in all fields before submitting.</span>
+      </div>
+
+      <div class="alert-message-success" id="alertSuccess">
+        <span id="alert" class="message-popup success">New request submited successful.</span>
+      </div>
+
+         <!-- reschedule card click -->
+               <div class="panelOpenBox" id="panelPickupBox">
+                <div class="headerText-line-">
+                    <img src="images/arrow (1).png" alt="arrow-left" class="arrow-left" width="0" onclick="closePanelPickupBox()">
+                    <h4 class="top-head">Schedule Pickup</h4>
+                </div>
+
+                       <!-- form for request -->
+               <div class="form-box">
+               
+
+
+                  <form id="request-form" class="request-form">
+                            <div class="form-group">
+                                <label for="request-type">Request Type</label>
+                                <select id="request-type" class="form-input" required>
+                                    <option value="">Select request type</option>
+                                    <option value="bin">New Bin</option>
+                                    <option value="pickup">Extra Pickup</option>
+                                    <option value="toilet">Mobile Toilet</option>
+                                    <option value="janitorial">Janitorial Service</option>
+                                    <option value="statement">Statement</option>
+                                    <option value="user-id">User ID</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+
+                             <div class="form-group">
+                                <label for="request-location">Full Name</label>
+                                <input type="text" id="request-fullName" class="form-input" placeholder="Enter your full name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="request-location">House number</label>
+                                <input type="text" id="request-House" class="form-input" placeholder="Enter your house number" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="request-phone">Contact Phone</label>
+                                <input type="tel" id="request-phone" class="form-input" placeholder="+233 000 000 000" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="request-quantity">Quantity (if applicable)</label>
+                                 <small class="form-help">only for new bin and mobile toilet</small>
+                                <input type="number" id="request-quantity" class="form-input" placeholder="Enter quantity" min="1">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="request-priority">Priority</label>
+                                <select id="request-priority" class="form-input" required>
+                                    <option value="low">Low</option>
+                                    <option value="medium" selected>Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
+                            
+                            <button class="btn-requst" id="btn-service-request">
+                                <i class="fa-solid fa-paper-plane"></i> Submit Request
+                            </button>
+                        </form>
+
+               </div>
+               </div>
+
+
+
+
+     <!-- request section starts -->
+     <section>
+        <div class="schedule-section request" id="request-section">
+
+               <!-- header-name -->
+               <div class="headerText-sch">
+                <h4 class="top-sch">Request</h4>
+            </div>
+
+               <!-- history of requests -->
+                <div class="requst-card" style="display: none;">
+                    <div class="row-flex-top">
+                        <h5 class="request-sub-bold"><i class="fa-solid fa-history"></i> My Requests</h5>
+                    </div>
+                    <div class="inner-request-box" id="requests-list">
+                        <p class="loading-text">Loading requests...</p>
+                    </div>
+                </div>
+
+                <p class="action-bold-title">Our Services</p>
+
+                <!-- request action card click -->
+                <div class="action-flex-card">
+                    <div class="card-action" onclick="selectRequestType('user-id')">
+                        <img src="images/face-scan.png" alt="face" width="0" loading="lazy" class="action-icon">
+                        <p class="action-text-card"> User ID</p>
+                    </div>
+
+                    <div class="card-action" onclick="selectRequestType('bin')">
+                        <img src="images/recycle.png" alt="bin" width="0" loading="lazy" class="action-icon">
+                        <p class="action-text-card"> New Bin</p>
+                    </div>
+
+                    <div class="card-action" onclick="selectRequestType('pickup')">
+                        <img src="images/garbage-truck.png" alt="bin" width="0" loading="lazy" class="action-icon">
+                        <p class="action-text-card">Extra Pickup</p>
+                    </div>
+
+                    <div class="card-action" onclick="selectRequestType('toilet')">
+                        <img src="images/garbage-truck.png" alt="bin" width="0" loading="lazy" class="action-icon">
+                        <p class="action-text-card">Mobile Toilet</p>
+                    </div>
+
+                    <div class="card-action" onclick="selectRequestType('janitorial')">
+                        <img src="images/garbage-truck.png" alt="bin" width="0" loading="lazy" class="action-icon">
+                        <p class="action-text-card">Janitorial service</p>
+                    </div>
+
+                    <div class="card-action" onclick="selectRequestType('statement')">
+                        <img src="images/request.png" alt="bin" width="0" loading="lazy" class="action-icon">
+                        <p class="action-text-card">Statement</p>
+                    </div>
+                </div>
+
+               <!-- Add new request form -->
+               <div class="requst-card">
+                    <div class="row-flex-top">
+                        <h5 class="request-sub-bold"><i class="fa-solid fa-plus"></i> New Request</h5>
+                    </div>
+                    <div class="inner-request-box">
+                        <form id="request-form" class="request-form">
+                            <div class="form-group">
+                                <label for="request-type">Request Type</label>
+                                <select id="request-type" class="form-input" required>
+                                    <option value="">Select request type</option>
+                                    <option value="bin">New Bin</option>
+                                    <option value="pickup">Extra Pickup</option>
+                                    <option value="toilet">Mobile Toilet</option>
+                                    <option value="janitorial">Janitorial Service</option>
+                                    <option value="statement">Statement</option>
+                                    <option value="user-id">User ID</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+
+                             <div class="form-group">
+                                <label for="request-location">Full Name</label>
+                                <input type="text" id="request-fullName" class="form-input" placeholder="Enter your full name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="request-location">House number</label>
+                                <input type="text" id="request-House" class="form-input" placeholder="Enter your house number" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="request-phone">Contact Phone</label>
+                                <input type="tel" id="request-phone" class="form-input" placeholder="+233 000 000 000" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="request-quantity">Quantity (if applicable)</label>
+                                 <small class="form-help">only for new bin and mobile toilet</small>
+                                <input type="number" id="request-quantity" class="form-input" placeholder="Enter quantity" min="1">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="request-priority">Priority</label>
+                                <select id="request-priority" class="form-input" required>
+                                    <option value="low">Low</option>
+                                    <option value="medium" selected>Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
+                            
+                            <button class="btn-requst" id="btn-service-request">
+                                <i class="fa-solid fa-paper-plane"></i> Submit Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- All Requests History Section -->
+                <div class="all-requests-section" style="display: none;">
+                    <div class="all-requests-header">
+                        <h5 class="all-requests-title"><i class="fa-solid fa-list"></i> All Requests History</h5>
+                    </div>
+                    <div class="all-requests-container" id="all-requests-list">
+                        <p class="loading-text">Loading all requests...</p>
+                    </div>
+                </div>
+
+        </div>
+     </section>
+     <!-- request section end -->
+
+     <!-- accounts section starts -->
+     <section>
+        <div class="schedule-section account" id="account-section">
+            <div class="headerText-sch">
+                <h4 class="top-sch hide-account">Account</h4>
+            </div>
+
+            <div class="flex-account-box">
+                 <img src="images/user.png" width="20px" loading="lazy" class="profile-pic" id="display-photo">
+                 <div class="profile-content">
+                    <p class="sm-name-text" id="display-name">Mclandslot Awuku</p>
+                <p class="sm-account-text" id="display-email">awukureuben@gmail.com</p>
+                <p class="sm-account-text" id="display-phone">+233 000 000 000</p>
+                <p class="sm-account-text" id="display-address">House number</p>
+                 </div>
+            </div>
+
+            <div class="black-account-details">
+                <p class="bold-title-text-p">Help and support</p>
+            <div class="p-actions">
+                <div class="card-sm-account">
+                    <i class="fa-solid fa-phone-volume"></i>
+                     <p class="account-sm">Contact Us</p>
+                </div>
+
+                  <div class="card-sm-account">
+                 <i class="fa-solid fa-envelope"></i>
+                           <p class="account-sm">Email Us</p>
+                </div>
+
+                   <div class="card-sm-account">
+                 <i class="fa-brands fa-square-instagram"></i>
+                           <p class="account-sm">Instagram</p>
+                </div>
+
+                    <div class="card-sm-account">
+                 <i class="fa-brands fa-square-facebook"></i>
+                           <p class="account-sm">Facebook</p>
+                </div>
+                
+            </div>
+
+            
+                  
+              <p class="bold-title-text-p">App History</p>
+              <div class="activities-summary">
+                <div class="activities-card" onclick="openPaymentHistory()">
+                    <p class="account-sm" > Payment History</p>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                 <div class="activities-card" onclick="openRequestHistory()">
+                    <p class="account-sm"> Request History</p>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                  <div class="activities-card" onclick="openReportHistory()">
+                    <p class="account-sm"> Reports History</p>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            
+              </div>
+
+              <p class="bold-title-text-p">Feedback</p>
+            <div class="feedback" onclick="openNotification()">
+               <i class="fa-solid fa-bell"></i>
+                <p class="account-sm"> Notification</p>
+            </div>
+
+             <div class="feedback" onclick="openFeedBack()">
+                <i class="fa-solid fa-comments"></i>
+                <p class="account-sm" > Send Feedback</p>
+            </div>
+
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fa-solid fa-sign-out-alt"></i>
+                       <p class="account-sm"> Logout</p>
+                </button>
+
+            </div>
+
+           
+
+        
+
+            <!-- User profile edit form -->
+            <!-- <div class="user-profile-edit" id="profile-edit" style="display: none;">
+                <div class="photo-upload-section">
+                    <img src="images/user.png" class="user-pic" id="edit-photo">
+                    <div class="photo-upload-container">
+                        <input type="file" id="photo-input" accept="image/*" style="display: none;">
+                        <button type="button" class="photo-upload-btn" onclick="document.getElementById('photo-input').click()">
+                            <i class="fa-solid fa-camera"></i> Change Photo
+                        </button>
+                    </div>
+                </div> -->
+
+                <!-- <form class="profile-form" id="profile-form">
+                    <div class="form-group">
+                        <label for="edit-name">Full Name</label>
+                        <input type="text" id="edit-name" class="form-input" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-phone">Phone Number</label>
+                        <input type="tel" id="edit-phone" class="form-input" placeholder="+233 000 000 000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-email">Email Address</label>
+                        <input type="email" id="edit-email" class="form-input" placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-address">Address</label>
+                        <textarea id="edit-address" class="form-input address-input" placeholder="Enter your full address" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel" onclick="cancelEdit()">Cancel</button>
+                        <button type="submit" class="btn-save">
+                            <i class="fa-solid fa-save"></i> Save Changes
+                        </button>
+                    </div>
+                </form> -->
+            </div>
+
+        </div>
+     </section>
+     <!-- accounts section ends -->
+
+      <!-- feedback from users form -->
+             <div class="users-feedback" id="users-feedback">
+                <div class="feedback-container">
+                    <h5 class="feed-bold-text">Your Feedback!</h5>
+                    <form>
+                       <div class="container-question">
+                         <p class="question-p">#1 How was your experience?</p>
+                        <label class="label-all>
+                           <label for="good"> <input type="radio" name="experience" id="good" class="feed-input" value="Good">Good</label>
+                           <label for="okay"> <input type="radio" name="experience" id="okay" class="feed-input" value="Okay">Okay</label>
+                            <label for="bad"><input type="radio" name="experience" id="bad" class="feed-input" value="Bad">Bad</label>
+                        </label>
+                       </div>
+
+                        <p class="question-p">#2 Would you refer the app to someone?</p>
+                        <label>
+                           <label for="yes"><input type="radio" name="refer" id="yes" class="feed-input" value="Yes">Yes</label>
+                           <label for="maybe"><input type="radio" name="refer" id="maybe" class="feed-input" value="Maybe">Maybe</label>
+                            <label for="no"><input type="radio" name="refer" id="no" class="feed-input" value="No">No</label>
+                        </label>
+                        <div class="feedback-btn-group">
+                            <button class="btn btn-cancel" id="closeUsersFeedback">Cancel</button>
+                            <button class="btn btn-submit" id="feedbackBnt">Send Feedback</button>
+                        </div>
+                    </form>
+                </div>
+             </div>
+
+             <!-- notification popup -->
+              <div class="notify-popup" id="notifications-popup">
+                <div class="message-notice">
+                    <p>Welcome to zoomliongh</p>
+                </div>
+
+              </div>
+
+     <!-- Custom Logout Confirmation Modal -->
+<div class="logout-modal-overlay" id="logout-modal-overlay">
+    <div class="logout-modal">
+        <div class="logout-modal-icon">
+            <i class="fas fa-sign-out-alt"></i>
+        </div>
+        <h3 class="logout-modal-title">Confirm Logout</h3>
+        <p class="logout-modal-message">Are you sure you want to logout? You'll be redirected to the landing page.</p>
+        <div class="logout-modal-actions">
+            <button class="logout-modal-btn cancel-btn" onclick="closeLogoutModal()">
+                <i class="fas fa-times"></i> Cancel
+            </button>
+            <button class="logout-modal-btn confirm-btn" onclick="confirmLogout()">
+                <i class="fas fa-check"></i> Yes, Logout
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- payment history display -->
+        <div id="payment-history-container" class="payment-history-container">
+ <div class="payment-show-div">
+     <h2 class="show-history-bold-text">Payment History</h2>
+  <div id="payment-card-list" class="card-list"></div>
+
+  <!-- close history -->
+  <div class="closePaymentHistory" onclick="closePaymentHistory()">
+    <p>X</p>
+  </div>
+ </div>
+</div>
+
+<!-- request history -->
+         <div id="request-history-container" class="request-history-container">
+ <div class="payment-show-div">
+     <h2 class="show-history-bold-text">Request History</h2>
+  <div id="request-card-list" class="report-card"></div>
+
+  <!-- close history -->
+  <div class="closePaymentHistory" onclick="closeRequestHistory()">
+    <p>X</p>
+  </div>
+ </div>
+</div>
+
+<!-- report history -->
+         <div id="report-history-container" class="report-history-container">
+ <div class="payment-show-div">
+     <h2 class="show-history-bold-text">Report History</h2>
+<div id="report-card-list" class="report-card"></div>
+
+  <!-- close history -->
+  <div class="closePaymentHistory" onclick="closeReportHistory()">
+    <p>X</p>
+  </div>
+ </div>
+</div>
+
+<!-- successful feedback alert -->
+ <div class="alert-feedback" id="alert-feedback">
+    <p class="alert-feedback-text">Feedback submitted successfully!</p>
+
+ </div>
+
+
+
+</main>
+
+
+
+
+
+<!-- function loading settimeout -->
+  <script>
+    setTimeout(() => {
+      const ShowMove = document.getElementById("show-Loading");
+      ShowMove.style.display = "none";
+    }, 2000);
+  </script>
+
+
+<script src="app.js" type="text/javascript" defer></script>
+<script src="database.js" type="module" defer></script>
+<script src="accountData.js" type="module" defer></script>
+<script src="payment.js" type="module" defer></script>
+<script src="statusPayment.js" type="module" defer></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+
+
+
+
+</body>
+</html>

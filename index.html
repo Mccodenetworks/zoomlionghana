@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#035ce0">
+    <title>ZoomLion Ghana - Smart Waste Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/41d51bfab0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="landing.css?v=1.2">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="LOGO.jpeg" alt="ZoomLion Logo" class="logo">
+                <span class="logo-text">ZoomLion</span>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn-outline" onclick="window.location.href='auth.html'">Sign In</button>
+                <button class="btn-primary" onclick="window.location.href='auth.html'">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Smart <span class="highlight">Waste Management</span> for a Cleaner Ghana
+                </h1>
+                <p class="hero-description">
+                    Join thousands of Ghanaians in making our communities cleaner and more sustainable. 
+                    Schedule pickups, track your waste, and contribute to a greener future with our comprehensive waste management platform.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-hero-primary" onclick="window.location.href='auth.html'">
+                        <i class="fas fa-rocket"></i>
+                        Start Managing Waste
+                    </button>
+                    <button class="btn-hero-secondary" onclick="scrollToServices()">
+                        <i class="fas fa-play"></i>
+                        Learn More
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Pickups Scheduled</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">Tons Recycled</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="card-header">
+                        <div class="card-avatar">
+                            <img src="images/user.png" alt="User Avatar">
+                        </div>
+                        <div class="card-info">
+                            <h4>Next Pickup</h4>
+                            <p>Residential Area</p>
+                        </div>
+                    </div>
+                    <div class="pickup-time">
+                        <i class="fas fa-calendar-alt"></i>
+                        Monday, Dec 16 • 8:00 AM - 12:00 PM
+                    </div>
+                    <div class="pickup-status">
+                        <i class="fas fa-check-circle"></i>
+                        Confirmed
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-description">
+                    Comprehensive waste management solutions tailored for residential and commercial needs.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="images/bin.png" alt="Residential Collection" class="service-image">
+                    <h3 class="service-title">Residential Collection</h3>
+                    <p class="service-description">
+                        Regular household waste collection with flexible scheduling options for your convenience.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <img src="images/recycle-symbol.png" alt="Recycling Services" class="service-image">
+                    <h3 class="service-title">Recycling Services</h3>
+                    <p class="service-description">
+                        Specialized recycling programs for paper, plastic, glass, and electronic waste materials.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <img src="images/request.png" alt="Commercial Waste" class="service-image">
+                    <h3 class="service-title">Commercial Waste</h3>
+                    <p class="service-description">
+                        Tailored waste management solutions for businesses, offices, and commercial establishments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">Ready to Transform Your Waste Management?</h2>
+            <p class="cta-description">
+                Join the thousands of satisfied customers who have made the switch to smarter, more efficient waste management.
+            </p>
+            <button class="btn-cta" onclick="window.location.href='auth.html'">
+                <i class="fas fa-arrow-right"></i>
+                Get Started Today
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="LOGO.jpeg" alt="ZoomLion Logo" class="logo">
+                    <span class="logo-text">ZoomLion Ghana</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#" onclick="scrollToServices()">Services</a>
+                    <a href="#" onclick="window.location.href='auth.html'">Login</a>
+                    <a href="mailto:info@zoomlionghana.com">Contact</a>
+                    <a href="tel:+233307019199">Support</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ZoomLion Ghana. All rights reserved. Building a cleaner, greener Ghana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling function
+        function scrollToServices() {
+            document.getElementById('services').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.backdropFilter = 'blur(20px)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(20px)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease-in-out';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html> 
